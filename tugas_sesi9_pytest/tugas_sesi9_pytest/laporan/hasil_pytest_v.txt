@@ -1,0 +1,59 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/claude/tugas_sesi9_pytest
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 48 items
+
+tests/test_app.py::test_pesanan_sukses_dan_email_terkirim PASSED         [  2%]
+tests/test_app.py::test_email_gagal_ditangani PASSED                     [  4%]
+tests/test_app.py::test_layanan_email_timeout PASSED                     [  6%]
+tests/test_app.py::test_id_tidak_valid_tidak_mengirim_email[0] PASSED    [  8%]
+tests/test_app.py::test_id_tidak_valid_tidak_mengirim_email[-5] PASSED   [ 10%]
+tests/test_app.py::test_dengan_monkeypatch PASSED                        [ 12%]
+tests/test_discount.py::test_diskon_di_batas_atas PASSED                 [ 14%]
+tests/test_discount.py::test_tanpa_diskon_di_bawah_batas PASSED          [ 16%]
+tests/test_discount.py::test_float_dengan_toleransi PASSED               [ 18%]
+tests/test_discount.py::test_hitung_diskon_bva[0-0] PASSED               [ 20%]
+tests/test_discount.py::test_hitung_diskon_bva[1-1] PASSED               [ 22%]
+tests/test_discount.py::test_hitung_diskon_bva[499999-499999] PASSED     [ 25%]
+tests/test_discount.py::test_hitung_diskon_bva[500000-450000] PASSED     [ 27%]
+tests/test_discount.py::test_hitung_diskon_bva[500001-450000.9] PASSED   [ 29%]
+tests/test_discount.py::test_hitung_diskon_bva[1000000-900000] PASSED    [ 31%]
+tests/test_discount.py::test_total_negatif_ditolak PASSED                [ 33%]
+tests/test_grade.py::test_grade_bva[0-E] PASSED                          [ 35%]
+tests/test_grade.py::test_grade_bva[39-E] PASSED                         [ 37%]
+tests/test_grade.py::test_grade_bva[40-D] PASSED                         [ 39%]
+tests/test_grade.py::test_grade_bva[54-D] PASSED                         [ 41%]
+tests/test_grade.py::test_grade_bva[55-C] PASSED                         [ 43%]
+tests/test_grade.py::test_grade_bva[69-C] PASSED                         [ 45%]
+tests/test_grade.py::test_grade_bva[70-B] PASSED                         [ 47%]
+tests/test_grade.py::test_grade_bva[84-B] PASSED                         [ 50%]
+tests/test_grade.py::test_grade_bva[85-A] PASSED                         [ 52%]
+tests/test_grade.py::test_grade_bva[100-A] PASSED                        [ 54%]
+tests/test_grade.py::test_grade_di_luar_rentang_ditolak[-1] PASSED       [ 56%]
+tests/test_grade.py::test_grade_di_luar_rentang_ditolak[101] PASSED      [ 58%]
+tests/test_keranjang.py::test_total_keranjang PASSED                     [ 60%]
+tests/test_keranjang.py::test_tambah_item_baru PASSED                    [ 62%]
+tests/test_keranjang.py::test_tambah_item_yang_sama_menambah_jumlah PASSED [ 64%]
+tests/test_keranjang.py::test_kosongkan PASSED                           [ 66%]
+tests/test_keranjang.py::test_input_tidak_valid_ditolak[0-1-Harga] PASSED [ 68%]
+tests/test_keranjang.py::test_input_tidak_valid_ditolak[-10-1-Harga] PASSED [ 70%]
+tests/test_keranjang.py::test_input_tidak_valid_ditolak[1000-0-Jumlah] PASSED [ 72%]
+tests/test_keranjang.py::test_input_tidak_valid_ditolak[1000--1-Jumlah] PASSED [ 75%]
+tests/test_keranjang.py::test_keranjang_banyak_item PASSED               [ 77%]
+tests/test_shipping.py::test_ongkir_valid[0.5-lokal-10000] PASSED        [ 79%]
+tests/test_shipping.py::test_ongkir_valid[1-lokal-10000] PASSED          [ 81%]
+tests/test_shipping.py::test_ongkir_valid[1.1-lokal-13000] PASSED        [ 83%]
+tests/test_shipping.py::test_ongkir_valid[30-lokal-97000] PASSED         [ 85%]
+tests/test_shipping.py::test_ongkir_valid[1-nasional-20000] PASSED       [ 87%]
+tests/test_shipping.py::test_ongkir_valid[2-nasional-28000] PASSED       [ 89%]
+tests/test_shipping.py::test_ongkir_valid[30-nasional-252000] PASSED     [ 91%]
+tests/test_shipping.py::test_berat_nol_atau_negatif_ditolak[0] PASSED    [ 93%]
+tests/test_shipping.py::test_berat_nol_atau_negatif_ditolak[-1] PASSED   [ 95%]
+tests/test_shipping.py::test_berat_melebihi_batas_ditolak PASSED         [ 97%]
+tests/test_shipping.py::test_zona_tidak_dikenal_ditolak PASSED           [100%]
+
+============================== 48 passed in 0.07s ==============================
